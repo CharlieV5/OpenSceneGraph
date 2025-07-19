@@ -47,6 +47,8 @@ ENDIF()
 
 PROJECT(OpenSceneGraph)
 
+SET(CMAKE_INSTALL_PREFIX "${CMAKE_CURRENT_SOURCE_DIR}/Pub" CACHE PATH "..." FORCE)
+
 # Set OSX architecture flags here, since they must be specified before
 # creating the actual OSG project.
 # Note that the CMAKE_OSX_* variables are not well documented in
@@ -746,7 +748,7 @@ ENDIF()
 OPTION(BUILD_OSG_APPLICATIONS "Enable to build OSG Applications (e.g. osgviewer)" ON)
 
 # OSG Examples
-OPTION(BUILD_OSG_EXAMPLES "Enable to build OSG Examples" OFF)
+OPTION(BUILD_OSG_EXAMPLES "Enable to build OSG Examples" ON)
 
 # OSG Plugins disable option for apple build on travis ci test - full build job runs over time limit of 50 min.
 OPTION(BUILD_OSG_PLUGINS "Build OSG Plugins - Disable for compile testing examples on a time limit" ON)
